@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionkart 🛍️</title>
+    
+</head>
+<style>
+  *{
+    margin: 0%;
+    padding: 0%;
+    
+  }
+
+  .collections {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-right:100px;
+}
+
+.content {
+    width: 330px;
+    margin: 20px;
+    position: relative;
+}
+
+.content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    z-index: 2;
+    opacity: 0;
+}
+
+.content:hover::after {
+    opacity: 1;
+}
+
+.content img {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    margin-right: 100px;
+}
+
+.img-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    color: var(--white);
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    z-index: 5;
+    opacity: 0;
+}
+
+.img-content p {
+    font-size: 1.6rem;
+}
+
+.img-content button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-content a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.img-content button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.img-content button:hover~.img-content a {
+    color: var(--primary-color);
+}
+
+.img-content a:hover {
+    color: var(--primary-color);
+}
+
+.content:hover .img-content {
+    opacity: 1;
+    top: 50%;
+}
+
+
+/* //........ Content 2 ........// */
+
+.content2 {
+    width: 330px;
+    margin: 20px;
+    position: relative;
+}
+
+.content2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    z-index: 2;
+    opacity: 0;
+}
+
+.content2:hover::after {
+    opacity: 1;
+}
+
+.content2 img {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.img-content2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    color: var(--white);
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    z-index: 5;
+    opacity: 0;
+}
+
+.img-content2 p {
+    font-size: 1.6rem;
+}
+
+.img-content2 a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.img-content2 button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-content2 button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.img-content2 button:hover~.img-content2 a {
+    color: var(--primary-color);
+}
+
+.img-content2 a:hover {
+    color: var(--primary-color);
+}
+
+.content2:hover .img-content2 {
+    opacity: 1;
+    top: 50%;
+}
+
+
+/* //........ Content 3 ........// */
+
+.content3 {
+    width: 330px;
+    margin: 20px;
+    position: relative;
+}
+
+.content3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    z-index: 2;
+    opacity: 0;
+}
+
+.content3:hover::after {
+    opacity: 1;
+}
+
+.content3 img {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.img-content3 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    color: var(--white);
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    z-index: 5;
+    opacity: 0;
+}
+
+.img-content3 p {
+    font-size: 1.6rem;
+}
+
+.img-content3 a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.img-content3 button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-content3 button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.img-content3 button:hover~.img-content3 a {
+    color: var(--primary-color);
+}
+
+.img-content3 a:hover {
+    color: var(--primary-color);
+}
+
+.content3:hover .img-content3 {
+    opacity: 1;
+    top: 50%;
+}
+
+.content3:hover .img-content3 {
+    opacity: 1;
+    top: 50%;
+}
+
+
+/* //........ seller  ........// */
+
+.best-seller {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.best-seller .red {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.best-seller .blue {
+    color: #8989ce;
+    cursor: pointer;
+}
+
+.best-seller .white {
+    color: var(--light-black);
+    cursor: pointer;
+}
+
+.best-seller .grey {
+    color: grey;
+    cursor: pointer;
+}
+
+.best-seller .brown {
+    color: rgb(175, 53, 53);
+    cursor: pointer;
+}
+
+.best-seller .yellow {
+    color: #ffff00;
+    cursor: pointer;
+}
+
+.best-seller .orange {
+    color: #ffa500;
+    cursor: pointer;
+}
+
+.best-seller .green {
+    color: #008000;
+    cursor: pointer;
+}
+
+.seller h2 {
+    margin-top: 65px;
+    margin-bottom: 20px;
+}
+
+.seller .best-p1 {
+    width: 250px;
+    height: 370px;
+    /* border: 2px solid black; */
+}
+
+.seller .best-p1 img {
+    height: 250px;
+    width: 250px;
+}
+
+.seller .best-p1 .price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seller .best-p1 .price .colors input[type="radio"] {
+    color: #000;
+    background-color: #000;
+}
+
+.best-seller .buy-now a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.seller a:hover {
+    color: #f05e8a;
+}
+
+.best-seller .buy-now button,
+.best-seller .add-cart button {
+    padding: 10px 15px;
+    margin-top: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #f05e8a;
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+    font-weight: 500;
+    border: 1px solid #f05e8a;
+    transition: 0.5s;
+}
+
+.best-seller .buy-now button:hover,
+.best-seller .add-cart button:hover {
+    background-color: var(--white);
+    font-weight: 600;
+}
+
+.best-seller .buy-now button:hover a,
+.best-seller .add-cart button:hover a {
+    color: #f05e8a;
+}
+
+  
+  button{
+
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: black;
+  border: ;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+  margin-left: 20px;
+}
+      
+        
+
+  .button2{
+    padding: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: black;
+  border: ;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+  margin-left: 20px;
+
+  }
+   nav{
+background-color: rgb(5, 0, 0);
+color: grey;
+border-color: yellow;
+border-style: solid;
+margin-top: 10px;
+border-width: 5px;
+
+}
+
+.header{
+   color
+}
+a:hover{
+cursor: none;
+
+}
+
+li,ul,h1{
+display: inline-block;
+
+
+}
+ul{
+margin-left: 50%;
+padding: 20px;
+
+
+}
+li{
+margin-right: 20px;
+cursor: pointer;
+}
+li:hover{
+color: red;
+cursor: none;
+
+}
+h1{
+color: greenyellow;
+padding-left: 20px;
+}
+
+.input{
+width: 60%;
+padding: 15px;
+}
+
+.searchbar{
+padding: 50px;
+margin-left: 80%;
+}
+.box{
+border-color: black;
+border-radius: 60px;
+border-style: solid;
+display: inline-block;
+padding: 50px;
+margin-left: 50px;
+margin-top: 50px;
+text-align: center;
+width: 200px;
+
+
+}
+
+h2{
+background-color: #00ffd5;
+display: inline-block;
+width: 100px;
+cursor: pointer;
+
+}
+
+h2:hover{
+
+
+}
+
+.glow-on-hover {
+width: 220px;
+height: 50px;
+border: none;
+outline: none;
+color: #fff;
+background: #111;
+cursor: pointer;
+position: relative;
+z-index: 0;
+border-radius: 10px;
+}
+
+.glow-on-hover:before {
+content: '';
+background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+position: absolute;
+top: -2px;
+left:-2px;
+background-size: 400%;
+z-index: -1;
+filter: blur(5px);
+width: calc(100% + 4px);
+height: calc(100% + 4px);
+animation: glowing 20s linear infinite;
+opacity: 0;
+transition: opacity .3s ease-in-out;
+border-radius: 10px;
+}
+
+.glow-on-hover:active {
+color: #000
+}
+
+.glow-on-hover:active:after {
+background: transparent;
+}
+
+.glow-on-hover:hover:before {
+opacity: 1;
+}
+
+.glow-on-hover:after {
+z-index: -1;
+content: '';
+position: absolute;
+width: 100%;
+height: 100%;
+background: #111;
+left: 0;
+top: 0;
+border-radius: 10px;
+}
+
+@keyframes glowing {
+0% { background-position: 0 0; }
+50% { background-position: 400% 0; }
+100% { background-position: 0 0; }
+}
+
+
+.products{
+text-align: center;
+margin-top: 100px;
+}
+
+h1 {
+
+color: #fff;
+}
+
+
+
+
+p {
+text-align:center;
+color: #fdec6e;
+}
+
+a:link {
+text-decoration: none;
+}
+
+a:visited {
+text-decoration: none;
+color: #fff;
+}
+
+a {
+color:#fff;
+-moz-transition: all 0.2s ease-in;
+-o-transition: all 0.2s ease-in;
+-webkit-transition: all 0.2s ease-in;
+transition: all 0.2s ease-in;
+}
+
+a:hover {
+color: #fdec6e;
+text-shadow:0px 0px 30px #fdec6e;
+-moz-transition: all 0.2s ease-in;
+-o-transition: all 0.2s ease-in;
+-webkit-transition: all 0.2s ease-in;
+transition: all 0.2s ease-in;
+}
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1009%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1010%26quot%3b)'%3e%3c/rect%3e%3cuse xlink:href='%23SvgjsSymbol1017' x='0' y='0'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsSymbol1017' x='720' y='0'%3e%3c/use%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1009'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1010'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(158%2c 0%2c 0%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3cpath d='M-1 0 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0z' id='SvgjsPath1012'%3e%3c/path%3e%3cpath d='M-3 0 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0z' id='SvgjsPath1014'%3e%3c/path%3e%3cpath d='M-5 0 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0z' id='SvgjsPath1011'%3e%3c/path%3e%3cpath d='M2 -2 L-2 2z' id='SvgjsPath1016'%3e%3c/path%3e%3cpath d='M6 -6 L-6 6z' id='SvgjsPath1013'%3e%3c/path%3e%3cpath d='M30 -30 L-30 30z' id='SvgjsPath1015'%3e%3c/path%3e%3c/defs%3e%3csymbol id='SvgjsSymbol1017'%3e%3cuse xlink:href='%23SvgjsPath1011' x='30' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='30' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='30' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='30' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='30' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='30' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='30' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='30' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='30' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1014' x='30' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='90' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='90' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='90' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='90' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='90' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='90' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='90' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='90' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='90' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='90' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1015' x='150' y='30' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='150' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='150' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='150' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='150' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='150' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='150' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='150' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='150' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='150' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='210' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1015' x='210' y='90' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='210' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='210' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='210' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='210' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='210' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='210' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='210' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='210' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='270' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='270' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1014' x='270' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='270' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='270' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='270' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='270' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='270' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='270' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='270' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1014' x='330' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='330' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='330' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1015' x='330' y='210' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='330' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='330' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='330' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='330' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='330' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='330' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='390' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='390' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='390' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='390' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='390' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='390' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='390' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='390' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='390' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='390' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='450' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='450' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='450' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='450' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='450' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='450' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='450' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='450' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1015' x='450' y='510' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1015' x='450' y='570' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1014' x='510' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1015' x='510' y='90' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='510' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='510' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='510' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='510' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='510' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='510' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='510' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='510' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='570' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='570' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='570' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='570' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='570' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1014' x='570' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='570' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='570' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='570' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='570' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1014' x='630' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1014' x='630' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='630' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='630' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='630' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='630' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='630' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='630' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='630' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1015' x='630' y='570' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1012' x='690' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1015' x='690' y='90' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='690' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='690' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1011' x='690' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='690' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='690' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1016' x='690' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='690' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1013' x='690' y='570' stroke='%231c538e'%3e%3c/use%3e%3c/symbol%3e%3c/svg%3e");
+
+
+body {
+
+}
+
+h1 {
+line-height: 1.25;
+}
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 0 clamp(1rem, 2vw, 5rem) 0 6rem;
+}
+
+.progress {
+width: 3rem;
+height: 3rem;
+position: fixed;
+top: calc(100vh - 4rem);
+left: 1rem;
+background: blue;
+border-radius: 50%;
+animation: bounce auto linear 6 alternate;
+animation-timeline: scroll(root);
+}
+
+@keyframes bounce {
+100% {
+transform: translateY(-50vh);
+}
+}
+
+
+.searchBox {
+position: absolute;
+top: 75px;
+left: 90%;
+bottom: 50%;
+margin: 3px;
+transform:  translate(-50%,50%);
+background: yellow;
+height: 40px;
+border-radius: 50px;
+padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+width: 240px;
+padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+background: white;
+color : red;
+}
+
+.searchButton {
+color: yellow;
+float: right;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background:
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.4s;
+}
+
+.searchInput {
+border:none;
+background: none;
+outline:none;
+float:left;
+padding: 0;
+color: red;
+font-size: 16px;
+transition: 0.4s;
+line-height: 40px;
+width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+width: 150px;
+padding: 0 6px;
+}
+}
+
+.ring
+{
+position:absolute;
+top:50%;
+left:50%;
+transfor
+m:translate(-50%,-50%);
+width:150px;
+height:150px;
+background:transparent;
+border:3px solid #3c3c3c;
+border-radius:50%;
+text-align:center;
+line-height:150px;
+font-family:sans-serif;
+font-size:20px;
+color:#fff000;
+letter-spacing:4px;
+text-transform:uppercase;
+text-shadow:0 0 10px #fff000;
+box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+.ring:before
+{
+content:'';
+position:absolute;
+top:-3px;
+left:-3px;
+width:100%;
+height:100%;
+border:3px solid transparent;
+border-top:3px solid #fff000;
+border-right:3px solid #fff000;
+border-radius:50%;
+animation:animateC 2s linear infinite;
+}
+span
+{
+display:block;
+position:absolute;
+top:calc(50% - 2px);
+left:50%;
+width:50%;
+height:4px;
+background:transparent;
+transform-origin:left;
+animation:animate 2s linear infinite;
+}
+span:before
+{
+content:'';
+position:absolute;
+width:16px;
+height:16px;
+border-radius:50%;
+background:#fff000;
+top:-6px;
+right:-8px;
+box-shadow:0 0 20px #fff000;
+}
+@keyframes animateC
+{
+0%
+{
+transform:rotate(0deg);
+}
+100%
+{
+transform:rotate(360deg);
+}
+}
+@keyframes animate
+{
+0%
+{
+transform:rotate(45deg);
+}
+100%
+{
+transform:rotate(405deg);
+}
+}
+.image:hover{
+transform: scale(1.08);
+
+}
+</style>
+<body>
+  <header>
+           
+
+         <div class="header">
+            <nav>
+                <h1><a href="#">Fashionkart</a></h1>
+             <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About As</a></li>
+                <li> <a href="contact.html">Contact As</a></li>
+             </ul>
+             
+             <button><a href="register.html">register</a></button>
+             <button class="button2">Login</button>
+            </nav>
+        </div>
+        </header>
+    
+        
+
+<div class="progress"></div>
+
+<div class="container">
+</div>
+
+<div class="searchBox">
+
+    <input class="searchInput"type="text" name="" placeholder="Search">
+    <button class="searchButton" href="#">
+        <i class="material-icons">
+            ✔️
+        </i>
+    </button>
+</div>
+
+
+
+
+<section id="collection">
+   <div class="collections container">
+       <div class="content">
+           <img src="https://i.postimg.cc/Xqmwr12c/clothing.webp" alt="img" />
+           <div class="img-content">
+               <p>Clothing Collections</p>
+               <button><a href="#sellers">SHOP NOW</a></button>
+           </div>
+       </div>
+       <div class="content2">
+           <img src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="img" />
+           <div class="img-content2">
+               <p>Shoes Spring</p>
+               <button><a href="#sellers">SHOP NOW</a></button>
+           </div>
+       </div>
+       <div class="content3">
+           <img src="https://i.postimg.cc/MHv7KJYp/access.webp" alt="img" />
+           <div class="img-content3">
+               <p>Accessories</p>
+               <button><a href="#sellers">SHOP NOW</a></button>
+           </div>
+       </div>
+   </div>
+
+
+
+   
+</section>
+
+
+      <div class="products">
+
+           <div class="box">
+                <img src="../ima" class="image">
+                <h2><a href="#">Shirt</a></h2>
+                <p></p>
+                <button class="glow-on-hover" type="button">ADD To Cart!</button>
+
+             </div>
+
+
+             <div class="box">
+                <img src="../Images/" class="image">
+                <h2><a href="#">T-Shirt</a></h2>
+                <p></p>
+                <button class="glow-on-hover" type="button">ADD To Cart!</button> 
+             </div>
+             
+             
+
+             <div class="box">
+                <img src="../Images/watch.jpg" class="image">
+                <h2><a href="#">WATCH</a></h2>
+                <p></p>
+                <button class="glow-on-hover" type="button">ADD To Cart!</button> 
+             </div>
+
+             <div class="box">
+                <img src="../Images/shoe.png" class="image">
+                <h2><a href="#">SHOES</a></h2>
+                <p></p>
+                <button class="glow-on-hover" type="button">ADD To Cart!</button> 
+             </div>   
+
+             
+             
+             
+<footer>
+        
+</footer>
+
+</body>
+
+      <script>
+             window.addEventListener(
+  "scroll",
+  () => {
+    document.body.style.setProperty(
+      "--scroll",
+      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+    );
+  },
+  false
+);
+
+
+document.addEventListener('contextmenu',
+function(event) {
+event.preventDefault();
+})
+
+
+
+
+
+
+      </script>
+</html>
